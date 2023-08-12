@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{47887170-142f-4690-9d46-a6aa4c75f6c8}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{79cf8a88-fcb7-46fd-9a9d-af6c71faae2e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{017a3b9e-dc6d-48cc-80a3-d85171e7beb9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\General">
+      <UniqueIdentifier>{963b1e26-b64c-4514-b1ec-71784588a4d3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\General">
+      <UniqueIdentifier>{b6889c4b-35af-4c9b-9e4f-9884f5e3f135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System">
+      <UniqueIdentifier>{25033d11-8c38-4ddc-a545-d2dcf3af1d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System">
+      <UniqueIdentifier>{3f3959b7-d072-452f-a79d-86cac314011b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\DataStructures">
+      <UniqueIdentifier>{3093e1d9-c7f7-4267-b335-12b199e04c84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemInfoTool.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\MemBuffer.cpp">
+      <Filter>소스 파일\General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\StringUtil.cpp">
+      <Filter>소스 파일\General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\System\CpuInfo.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\System\HardwareInfo.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\System\OsInfo.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\System\SoftwareInfo.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\System\Wmi.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Regular.cpp">
+      <Filter>소스 파일\General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\BaseFile.cpp">
+      <Filter>소스 파일\General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\EventLog.cpp">
+      <Filter>소스 파일\General</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemInfoToolAll.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Common.h">
+      <Filter>헤더 파일\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MemBuffer.h">
+      <Filter>헤더 파일\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\StringUtil.h">
+      <Filter>헤더 파일\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\CpuInfo.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\HardwareInfo.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\OsInfo.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\SoftwareInfo.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\SystemInfoCommon.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\Wmi.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DataStructures\BaseLinkedList.h">
+      <Filter>헤더 파일\DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Regular.h">
+      <Filter>헤더 파일\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\BaseFile.h">
+      <Filter>헤더 파일\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\EventLog.h">
+      <Filter>헤더 파일\General</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

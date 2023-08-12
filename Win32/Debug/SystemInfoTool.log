@@ -1,0 +1,14 @@
+﻿  StdAfx.cpp
+  BaseFile.cpp
+  EventLog.cpp
+  MemBuffer.cpp
+  Regular.cpp
+  StringUtil.cpp
+  CpuInfo.cpp
+  HardwareInfo.cpp
+  OsInfo.cpp
+  SoftwareInfo.cpp
+  Wmi.cpp
+  SystemInfoTool.cpp
+  코드를 생성하고 있습니다...
+  SystemInfoTool.vcxproj -> E:\GitHub\CPP\SystemInfoTool\Win32\Debug\SystemInfoTool.exe
