@@ -209,7 +209,7 @@ int main(int argc, char* argv[])
 	tszBuffer1[1] = ' ';
 	tszBuffer1[2] = '\0';
 
-	StrReplace(CpuInfo.GetProcessorName(), tszBuffer1, _T(""), TCPUName);
+	StrReplace(TCPUName, CpuInfo.GetProcessorName(), tszBuffer1, _T(""));
 
 	StringCchPrintf(tszBuffer, _countof(tszBuffer), _T("CPU Name = %s"), TCPUName.GetBuffer());
 	EvLog.EventLog(tszBuffer, false);
