@@ -6,9 +6,6 @@
 #ifndef __SYSTEMINFOTOOLALL_H__
 #define __SYSTEMINFOTOOLALL_H__
 
-#include <iostream>
-using namespace std;
-
 //***************************************************************************
 // Version Define
 //***************************************************************************
@@ -21,6 +18,7 @@ using namespace std;
 #include <BaseFile.h>
 #include <EventLog.h>
 #include <BaseLinkedList.h>
+#include <SafeLinkedList.h>
 #include <OsInfo.h>
 #include <SoftwareInfo.h>
 #include <CpuInfo.h>

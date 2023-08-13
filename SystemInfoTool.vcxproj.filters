@@ -13,11 +13,11 @@
       <UniqueIdentifier>{017a3b9e-dc6d-48cc-80a3-d85171e7beb9}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
-    <Filter Include="소스 파일\General">
+    <Filter Include="소스 파일\Common">
       <UniqueIdentifier>{963b1e26-b64c-4514-b1ec-71784588a4d3}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\General">
+    <Filter Include="헤더 파일\Common">
       <UniqueIdentifier>{b6889c4b-35af-4c9b-9e4f-9884f5e3f135}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\System">
@@ -26,87 +26,87 @@
     <Filter Include="소스 파일\System">
       <UniqueIdentifier>{3f3959b7-d072-452f-a79d-86cac314011b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\DataStructures">
-      <UniqueIdentifier>{3093e1d9-c7f7-4267-b335-12b199e04c84}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="StdAfx.cpp">
+    <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="SystemInfoTool.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\Common\BaseFile.cpp">
-      <Filter>소스 파일\General</Filter>
+      <Filter>소스 파일\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\Common\EventLog.cpp">
-      <Filter>소스 파일\General</Filter>
+      <Filter>소스 파일\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\Common\MemBuffer.cpp">
-      <Filter>소스 파일\General</Filter>
+      <Filter>소스 파일\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\Common\Regular.cpp">
-      <Filter>소스 파일\General</Filter>
+      <Filter>소스 파일\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\Common\RWLock.cpp">
+      <Filter>소스 파일\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\Common\StringUtil.cpp">
-      <Filter>소스 파일\General</Filter>
+      <Filter>소스 파일\Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\Library\System\Wmi.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Library\System\SoftwareInfo.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Library\System\OsInfo.cpp">
+    <ClCompile Include="..\Library\System\CpuInfo.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\System\HardwareInfo.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
-    <ClCompile Include="..\Library\System\CpuInfo.cpp">
+    <ClCompile Include="..\Library\System\OsInfo.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\System\SoftwareInfo.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\System\Wmi.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StdAfx.h">
+    <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="SystemInfoToolAll.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\Library\DataStructures\BaseLinkedList.h">
-      <Filter>헤더 파일\DataStructures</Filter>
+    <ClInclude Include="..\Library\Common\BaseFile.h">
+      <Filter>헤더 파일\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\Common\Common.h">
-      <Filter>헤더 파일\General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Library\Common\BaseFile.h">
-      <Filter>헤더 파일\General</Filter>
+      <Filter>헤더 파일\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\System\CpuInfo.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\Common\EventLog.h">
-      <Filter>헤더 파일\General</Filter>
+      <Filter>헤더 파일\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\System\HardwareInfo.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\Common\MemBuffer.h">
-      <Filter>헤더 파일\General</Filter>
+      <Filter>헤더 파일\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\System\OsInfo.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\Common\Regular.h">
-      <Filter>헤더 파일\General</Filter>
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\Common\RWLock.h">
+      <Filter>헤더 파일\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\System\SoftwareInfo.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\Common\StringUtil.h">
-      <Filter>헤더 파일\General</Filter>
+      <Filter>헤더 파일\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\System\SystemInfoCommon.h">
       <Filter>헤더 파일\System</Filter>

@@ -71,20 +71,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
+    <SourcePath>E:\GitHub\CPP\Library\Common;$(SourcePath)</SourcePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(ProjectDir);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(ProjectDir);$(IncludePath)</IncludePath>
+    <SourcePath>E:\GitHub\CPP\Library\Common;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
@@ -93,16 +95,18 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(ProjectDir);$(IncludePath)</IncludePath>
+    <SourcePath>E:\GitHub\CPP\Library\Common;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(ProjectDir);$(IncludePath)</IncludePath>
+    <SourcePath>E:\GitHub\CPP\Library\Common;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,7 +117,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -130,6 +134,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>false</OptimizeReferences>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <TypeLibraryName>.\Release/SystemInfoTool.tlb</TypeLibraryName>
@@ -149,7 +154,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -166,6 +171,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>false</OptimizeReferences>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <TypeLibraryName>.\Release/SystemInfoTool.tlb</TypeLibraryName>
@@ -184,7 +190,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -220,7 +226,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -238,6 +244,7 @@
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <TypeLibraryName>.\Debug/SystemInfoTool.tlb</TypeLibraryName>
@@ -254,13 +261,14 @@
     <ClCompile Include="..\Library\Common\EventLog.cpp" />
     <ClCompile Include="..\Library\Common\MemBuffer.cpp" />
     <ClCompile Include="..\Library\Common\Regular.cpp" />
+    <ClCompile Include="..\Library\Common\RWLock.cpp" />
     <ClCompile Include="..\Library\Common\StringUtil.cpp" />
     <ClCompile Include="..\Library\System\CpuInfo.cpp" />
     <ClCompile Include="..\Library\System\HardwareInfo.cpp" />
     <ClCompile Include="..\Library\System\OsInfo.cpp" />
     <ClCompile Include="..\Library\System\SoftwareInfo.cpp" />
     <ClCompile Include="..\Library\System\Wmi.cpp" />
-    <ClCompile Include="StdAfx.cpp">
+    <ClCompile Include="pch.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
       <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
@@ -295,15 +303,15 @@
     <ClInclude Include="..\Library\Common\EventLog.h" />
     <ClInclude Include="..\Library\Common\MemBuffer.h" />
     <ClInclude Include="..\Library\Common\Regular.h" />
+    <ClInclude Include="..\Library\Common\RWLock.h" />
     <ClInclude Include="..\Library\Common\StringUtil.h" />
-    <ClInclude Include="..\Library\DataStructures\BaseLinkedList.h" />
     <ClInclude Include="..\Library\System\CpuInfo.h" />
     <ClInclude Include="..\Library\System\HardwareInfo.h" />
     <ClInclude Include="..\Library\System\OsInfo.h" />
     <ClInclude Include="..\Library\System\SoftwareInfo.h" />
     <ClInclude Include="..\Library\System\SystemInfoCommon.h" />
     <ClInclude Include="..\Library\System\Wmi.h" />
-    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="SystemInfoToolAll.h" />
   </ItemGroup>
   <ItemGroup>
