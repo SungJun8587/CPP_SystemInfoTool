@@ -75,7 +75,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>D:\DevCode\CppDev\Common\General\Include;D:\DevCode\CppDev\Common\DataStructures\Include;D:\DevCode\CppDev\Common\System\Include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
@@ -84,7 +84,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>D:\DevCode\CppDev\Common\General\Include;D:\DevCode\CppDev\Common\DataStructures\Include;D:\DevCode\CppDev\Common\System\Include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
@@ -93,7 +93,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>E:\GitHub\CPP\Common;E:\GitHub\CPP\DataStructures;E:\GitHub\CPP\System;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
@@ -102,7 +102,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
-    <IncludePath>D:\DevCode\CppDev\Common\General\Include;D:\DevCode\CppDev\Common\DataStructures\Include;D:\DevCode\CppDev\Common\System\Include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;E:\GitHub\CPP\Library\System;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -250,16 +250,16 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Common\BaseFile.cpp" />
-    <ClCompile Include="..\Common\EventLog.cpp" />
-    <ClCompile Include="..\Common\MemBuffer.cpp" />
-    <ClCompile Include="..\Common\Regular.cpp" />
-    <ClCompile Include="..\Common\StringUtil.cpp" />
-    <ClCompile Include="..\System\CpuInfo.cpp" />
-    <ClCompile Include="..\System\HardwareInfo.cpp" />
-    <ClCompile Include="..\System\OsInfo.cpp" />
-    <ClCompile Include="..\System\SoftwareInfo.cpp" />
-    <ClCompile Include="..\System\Wmi.cpp" />
+    <ClCompile Include="..\Library\Common\BaseFile.cpp" />
+    <ClCompile Include="..\Library\Common\EventLog.cpp" />
+    <ClCompile Include="..\Library\Common\MemBuffer.cpp" />
+    <ClCompile Include="..\Library\Common\Regular.cpp" />
+    <ClCompile Include="..\Library\Common\StringUtil.cpp" />
+    <ClCompile Include="..\Library\System\CpuInfo.cpp" />
+    <ClCompile Include="..\Library\System\HardwareInfo.cpp" />
+    <ClCompile Include="..\Library\System\OsInfo.cpp" />
+    <ClCompile Include="..\Library\System\SoftwareInfo.cpp" />
+    <ClCompile Include="..\Library\System\Wmi.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
@@ -290,19 +290,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Common\BaseFile.h" />
-    <ClInclude Include="..\Common\Common.h" />
-    <ClInclude Include="..\Common\EventLog.h" />
-    <ClInclude Include="..\Common\MemBuffer.h" />
-    <ClInclude Include="..\Common\Regular.h" />
-    <ClInclude Include="..\Common\StringUtil.h" />
-    <ClInclude Include="..\DataStructures\BaseLinkedList.h" />
-    <ClInclude Include="..\System\CpuInfo.h" />
-    <ClInclude Include="..\System\HardwareInfo.h" />
-    <ClInclude Include="..\System\OsInfo.h" />
-    <ClInclude Include="..\System\SoftwareInfo.h" />
-    <ClInclude Include="..\System\SystemInfoCommon.h" />
-    <ClInclude Include="..\System\Wmi.h" />
+    <ClInclude Include="..\Library\Common\BaseFile.h" />
+    <ClInclude Include="..\Library\Common\Common.h" />
+    <ClInclude Include="..\Library\Common\EventLog.h" />
+    <ClInclude Include="..\Library\Common\MemBuffer.h" />
+    <ClInclude Include="..\Library\Common\Regular.h" />
+    <ClInclude Include="..\Library\Common\StringUtil.h" />
+    <ClInclude Include="..\Library\DataStructures\BaseLinkedList.h" />
+    <ClInclude Include="..\Library\System\CpuInfo.h" />
+    <ClInclude Include="..\Library\System\HardwareInfo.h" />
+    <ClInclude Include="..\Library\System\OsInfo.h" />
+    <ClInclude Include="..\Library\System\SoftwareInfo.h" />
+    <ClInclude Include="..\Library\System\SystemInfoCommon.h" />
+    <ClInclude Include="..\Library\System\Wmi.h" />
     <ClInclude Include="StdAfx.h" />
     <ClInclude Include="SystemInfoToolAll.h" />
   </ItemGroup>
