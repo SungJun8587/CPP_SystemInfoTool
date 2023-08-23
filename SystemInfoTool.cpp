@@ -3,7 +3,16 @@
 //
 //***************************************************************************
 
-#include "pch.h"
+#include <pch.h>
+#include <iostream>
+
+#if defined(_M_IX86)
+	#include "CpuInfo86.h"
+#else
+	#include "CpuInfo64.h"
+#endif
+
+using namespace std;
 
 #define VS_SEVICE_TITLE _T("winmgmt")
 
@@ -53,7 +62,8 @@ int main(int argc, char* argv[])
 			cout << " Device Descreption : " << lpDisplayDevice.DeviceString << endl;
 			cout << " Device Status : " << lpDisplayDevice.StateFlags << endl << endl;
 		}
-	}*/
+	}
+	*/
 
 	CCpuInfo			CpuInfo;
 	CBiosInfo			BiosInfo;
@@ -1174,3 +1184,76 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
+
+/*
+int main(int argc, char* argv[])
+{
+	if( cpu_id_supported() )
+	{
+		cout << "CPUID = yes" << endl;
+		cout << "AVX = " << (cpu_avx() ? "yes" : "no") << endl;
+		cout << "AVX2 = " << (cpu_avx2() ? "yes" : "no") << endl;
+		cout << "MMX = " << (cpu_mmx() ? "yes" : "no") << endl;
+		cout << "SSE = " << (cpu_sse() ? "yes" : "no") << endl;
+		cout << "SSE2 = " << (cpu_sse2() ? "yes" : "no") << endl;
+		cout << "SSE3 = " << (cpu_sse3() ? "yes" : "no") << endl;
+		cout << "SSSE3 = " << (cpu_ssse3() ? "yes" : "no") << endl;
+		cout << "SSE41 = " << (cpu_sse41() ? "yes" : "no") << endl;
+		cout << "SSE42 = " << (cpu_sse42() ? "yes" : "no") << endl;
+		cout << "HT = " << (cpu_hyperthreading() ? "yes" : "no") << endl;
+		cout << "ThreadCount = " << cpu_logical_processor_count() << endl;
+
+		// retrieve the processor brand
+		char brand[48 + 1];
+		brand[48] = 0;
+		if( cpu_brand(brand) )
+		{
+			cout << "Brand = " << brand << endl;
+		}
+		cout << endl << "Ctrl+C to quit" << endl;
+	}
+	else
+	{
+		cout << "CPUID = no" << endl;
+	}
+	cin.get();
+	return 0;
+
+	if( cpu_id_supported() )
+	{
+		cout << "CPUID = yes" << endl;
+		cout << "AVX = " << (cpu_avx() ? "yes" : "no") << endl;
+		cout << "AVX2 = " << (cpu_avx2() ? "yes" : "no") << endl;
+		cout << "MMX = " << (cpu_mmx() ? "yes" : "no") << endl;
+		cout << "SSE = " << (cpu_sse() ? "yes" : "no") << endl;
+		cout << "SSE2 = " << (cpu_sse2() ? "yes" : "no") << endl;
+		cout << "SSE3 = " << (cpu_sse3() ? "yes" : "no") << endl;
+		cout << "SSSE3 = " << (cpu_ssse3() ? "yes" : "no") << endl;
+		cout << "SSE41 = " << (cpu_sse41() ? "yes" : "no") << endl;
+		cout << "SSE42 = " << (cpu_sse42() ? "yes" : "no") << endl;
+		cout << "HT = " << (cpu_hyperthreading() ? "yes" : "no") << endl;
+		cout << "ThreadCount = " << cpu_logical_processor_count() << endl;
+
+		// retrieve the processor brand
+		union {
+			char brand[48 + 1];
+			long long buffer[6];
+		};
+		brand[48] = 0;
+		buffer[0] = cpu_brand_part0();
+		buffer[1] = cpu_brand_part1();
+		buffer[2] = cpu_brand_part2();
+		buffer[3] = cpu_brand_part3();
+		buffer[4] = cpu_brand_part4();
+		buffer[5] = cpu_brand_part5();
+		cout << "Brand = " << brand << endl;
+		cout << endl << "Ctrl+C to quit" << endl;
+	}
+	else
+	{
+		cout << "CPUID = no" << endl;
+	}
+	cin.get();
+	return 0;
+}
+*/

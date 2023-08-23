@@ -11,14 +11,13 @@
 //***************************************************************************
 #include <Common.h>
 #include <WebCommon.h>
-#include <SystemInfoCommon.h>
 #include <MemBuffer.h>
 #include <StringUtil.h>
 #include <Regular.h>
 #include <BaseFile.h>
 #include <EventLog.h>
 #include <BaseLinkedList.h>
-#include <SafeLinkedList.h>
+#include <SystemInfoCommon.h>
 #include <OsInfo.h>
 #include <SoftwareInfo.h>
 #include <CpuInfo.h>
