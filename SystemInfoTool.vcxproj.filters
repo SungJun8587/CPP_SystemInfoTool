@@ -117,10 +117,10 @@
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CpuInfo64.h">
+    <ClInclude Include="..\Library\System\CpuInfo64.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CpuInfo86.h">
+    <ClInclude Include="..\Library\System\CpuInfo86.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>
@@ -133,10 +133,10 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="CpuInfo64.asm">
+    <MASM Include="..\Library\System\CpuInfo64.asm">
       <Filter>소스 파일\System</Filter>
     </MASM>
-    <MASM Include="CpuInfo86.asm">
+    <MASM Include="..\Library\System\CpuInfo86.asm">
       <Filter>소스 파일\System</Filter>
     </MASM>
   </ItemGroup>

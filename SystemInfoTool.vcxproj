@@ -341,13 +341,13 @@
     <ClInclude Include="..\Library\Common\RWLock.h" />
     <ClInclude Include="..\Library\Common\StringUtil.h" />
     <ClInclude Include="..\Library\System\CpuInfo.h" />
+    <ClInclude Include="..\Library\System\CpuInfo64.h" />
+    <ClInclude Include="..\Library\System\CpuInfo86.h" />
     <ClInclude Include="..\Library\System\HardwareInfo.h" />
     <ClInclude Include="..\Library\System\OsInfo.h" />
     <ClInclude Include="..\Library\System\SoftwareInfo.h" />
     <ClInclude Include="..\Library\System\SystemInfoCommon.h" />
     <ClInclude Include="..\Library\System\Wmi.h" />
-    <ClInclude Include="CpuInfo64.h" />
-    <ClInclude Include="CpuInfo86.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SystemInfoToolAll.h" />
@@ -359,17 +359,17 @@
     <ResourceCompile Include="SystemInfoTool.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="CpuInfo64.asm">
+    <MASM Include="..\Library\System\CpuInfo64.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
     </MASM>
-    <MASM Include="CpuInfo86.asm">
+    <MASM Include="..\Library\System\CpuInfo86.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </MASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
