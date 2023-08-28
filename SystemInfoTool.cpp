@@ -1179,12 +1179,10 @@ int main(int argc, char* argv[])
 	}
 #endif
 
-/*
 	CloseServiceHandle(hService);
 	CloseServiceHandle(hScm);
 
 	return 0;
-*/
 }
 
 /*
