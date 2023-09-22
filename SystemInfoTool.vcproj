@@ -184,7 +184,7 @@
 				</FileConfiguration>
 			</File>
 			<Filter
-				Name="Common"
+				Name="UtilCore"
 				Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
 				<File
 					RelativePath="..\..\..\Common\Source\BaseFile.cpp">

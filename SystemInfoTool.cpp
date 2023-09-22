@@ -4,7 +4,13 @@
 //***************************************************************************
 
 #include <pch.h>
+
 #include <iostream>
+#include <vector>
+#include <bitset>
+#include <array>
+#include <string>
+#include <intrin.h>
 
 #if defined(_M_IX86)
 	#include "CpuInfo86.h"
@@ -34,36 +40,19 @@ int main(int argc, char* argv[])
 	_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 #endif
 
+	char szSource[20] = "안녕123하세요";
+	wchar_t wszSource[20] = L"안녕123하세요";
+
+	int nLength = MultiByteToWideChar(CP_ACP, 0, (LPSTR)szSource, -1, NULL, 0);
+	nLength = WideCharToMultiByte(CP_ACP, 0, wszSource, -1, NULL, 0, NULL, NULL);
+	nLength = strlen(szSource);
+	nLength = wcslen(wszSource);
+
 	bool	fPause = true;
 	int		i = 0;
 
 	TCHAR	tszFormat[NUMERIC_STRING_LEN];
 	TCHAR	tszBuffer[MAX_BUFFER_SIZE];
-
-	/*cout << "Program Running" << endl;
-
-	DWORD iDevNum = 0;
-	DISPLAY_DEVICE lpDisplayDevice;
-	DWORD dwFlags = 0;
-
-	lpDisplayDevice.cb = sizeof(lpDisplayDevice);
-
-	while( EnumDisplayDevices( NULL, iDevNum, &lpDisplayDevice, dwFlags ) )
-	{
-		iDevNum++;
-
-		if( lpDisplayDevice.StateFlags & DISPLAY_DEVICE_ACTIVE
-			&& !(lpDisplayDevice.StateFlags & DISPLAY_DEVICE_VGA_COMPATIBLE ) )
-		{
-			cout << " Display Device : " << iDevNum << endl;
-			cout << " Device ID : " << lpDisplayDevice.DeviceID << endl;
-			cout << " Device Key : " << lpDisplayDevice.DeviceKey << endl;
-			cout << " Device Name : " << lpDisplayDevice.DeviceName << endl;
-			cout << " Device Descreption : " << lpDisplayDevice.DeviceString << endl;
-			cout << " Device Status : " << lpDisplayDevice.StateFlags << endl << endl;
-		}
-	}
-	*/
 
 	CCpuInfo			CpuInfo;
 	CBiosInfo			BiosInfo;
@@ -1188,6 +1177,30 @@ int main(int argc, char* argv[])
 /*
 int main(int argc, char* argv[])
 {
+	cout << "Program Running" << endl;
+
+	DWORD iDevNum = 0;
+	DISPLAY_DEVICE lpDisplayDevice;
+	DWORD dwFlags = 0;
+
+	lpDisplayDevice.cb = sizeof(lpDisplayDevice);
+
+	while( EnumDisplayDevices( NULL, iDevNum, &lpDisplayDevice, dwFlags ) )
+	{
+		iDevNum++;
+
+		if( lpDisplayDevice.StateFlags & DISPLAY_DEVICE_ACTIVE
+			&& !(lpDisplayDevice.StateFlags & DISPLAY_DEVICE_VGA_COMPATIBLE ) )
+		{
+			cout << " Display Device : " << iDevNum << endl;
+			cout << " Device ID : " << lpDisplayDevice.DeviceID << endl;
+			cout << " Device Key : " << lpDisplayDevice.DeviceKey << endl;
+			cout << " Device Name : " << lpDisplayDevice.DeviceName << endl;
+			cout << " Device Descreption : " << lpDisplayDevice.DeviceString << endl;
+			cout << " Device Status : " << lpDisplayDevice.StateFlags << endl << endl;
+		}
+	}
+
 	if( cpu_id_supported() )
 	{
 		cout << "CPUID = yes" << endl;

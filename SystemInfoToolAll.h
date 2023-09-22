@@ -9,15 +9,15 @@
 //***************************************************************************
 // Version Define
 //***************************************************************************
-#include <Common.h>
-#include <WebCommon.h>
+#include <BaseDefine.h>
+#include <BaseRedefineDataType.h>
 #include <MemBuffer.h>
 #include <StringUtil.h>
 #include <Regular.h>
 #include <BaseFile.h>
 #include <EventLog.h>
 #include <BaseLinkedList.h>
-#include <SystemInfoCommon.h>
+#include <SystemBaseDefine.h>
 #include <OsInfo.h>
 #include <SoftwareInfo.h>
 #include <CpuInfo.h>
